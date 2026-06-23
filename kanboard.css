@@ -138,6 +138,31 @@ html:root {
 .color-grey   { border-left: 4px solid #a9c4b0 !important; }
 .color-dark_grey { border-left: 4px solid #7d9384 !important; }
 
+/* native selects: Kanboard doesn't theme these — force it */
+select, .form-inline select {
+  -webkit-appearance: none; -moz-appearance: none; appearance: none;
+  background-color: #14241a !important;
+  color: #eaf3ea !important;
+  border: 1px solid #2c4a36 !important;
+  padding: 3px 26px 3px 6px !important;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23a9c4b0' stroke-width='3'><path d='M6 9l6 6 6-6'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+}
+select option, select optgroup {
+  background-color: #14241a !important;
+  color: #eaf3ea !important;
+}
+
+/* text inputs: belt-and-suspenders over the variable */
+input[type="text"], input[type="url"], input[type="email"],
+input[type="password"], input[type="number"], input[type="search"],
+input[type="date"], textarea {
+  background-color: #14241a !important;
+  color: #eaf3ea !important;
+  border: 1px solid #2c4a36 !important;
+}
+
 /* any SVG icons (plugins) follow the pale font color */
 svg, svg path { fill: currentColor !important; }
 
