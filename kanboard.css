@@ -1,0 +1,148 @@
+/* ============================================================
+   Kanboard — Forest / Pale Green + Gold  (variable-driven)
+   Paste into: Settings → Application settings → Custom Stylesheet
+   Works on the light, dark, or auto base theme.
+   Retune by editing the values below. Hard-refresh after saving.
+
+   WHY THIS WORKS: Kanboard themes the whole UI through CSS
+   variables on :root. We override those variables (via html:root,
+   which outranks the stock :root blocks) so panels, tables, list
+   headers, inputs, etc. all recolor from one place — no per-
+   selector !important chasing.
+   ============================================================ */
+
+html:root {
+  /* ---- core forest palette (edit these to retune everything) ---- */
+  /* bg #0e1611 · surface #14241a · surface-2 #1c3325 · border #2c4a36
+     text #eaf3ea · text-hi #f4faf4 · muted #a9c4b0 · accent #8fd6a0
+     gold-dark #2f2913 · gold-edge #b89b4e · gold-text #e7dca6        */
+
+  --body-background-color: #0e1611;
+  --header-background-color: #14241a;
+  --color-primary: #eaf3ea;
+  --color-light: #a9c4b0;
+  --color-lighter: #2c4a36;
+  --color-dark: #f4faf4;
+  --color-medium: #cdddce;
+  --color-error: #e3a59d;
+
+  --link-color-primary: #8fd6a0;
+  --link-color-focus: #ade4b8;
+  --link-color-hover: #ade4b8;
+
+  /* alerts */
+  --alert-color-default: #ddc97a; --alert-background-color-default: #241f10; --alert-border-color-default: #5a4f25;
+  --alert-color-success: #bfe9c8; --alert-background-color-success: #16301f; --alert-border-color-success: #2c4a36;
+  --alert-color-error:   #e7b4ad; --alert-background-color-error:   #3a1714; --alert-border-color-error:   #5a2a24;
+  --alert-color-info:    #a9d6e6; --alert-background-color-info:    #10242c; --alert-border-color-info:    #27474f;
+  --alert-color-normal:  #eaf3ea; --alert-background-color-normal:  #1c3325; --alert-border-color-normal:  #2c4a36;
+
+  /* buttons */
+  --button-default-color: #eaf3ea; --button-default-background-color: #1c3325; --button-default-border-color: #2c4a36;
+  --button-default-color-focus: #f4faf4; --button-default-background-color-focus: #24412f; --button-default-border-color-focus: #39604a;
+  --button-primary-color: #0e1611; --button-primary-background-color: #8fd6a0; --button-primary-border-color: #7cc48d;
+  --button-primary-color-focus: #0e1611; --button-primary-background-color-focus: #ade4b8; --button-primary-border-color-focus: #8fd6a0;
+  --button-danger-color: #160d0b; --button-danger-background-color: #e3a59d; --button-danger-border-color: #cf8c84;
+  --button-danger-color-focus: #160d0b; --button-danger-background-color-focus: #edb8b1; --button-danger-border-color-focus: #e3a59d;
+  --button-disabled-color: #5d7165; --button-disabled-background-color: #14241a; --button-disabled-border-color: #2c4a36;
+
+  /* tables */
+  --table-header-background-color: #1c3325;
+  --table-nth-background-color: #16271c;
+  --table-border-color: #2c4a36;
+
+  /* list view (gold header) */
+  --table-list-header-background-color: #2f2913;   /* gold-dark; antique #3b3115 · near-black #262011 */
+  --table-list-header-border-color: #b89b4e;       /* gold-edge */
+  --table-list-nth-background-color: #16271c;
+  --table-list-border-color: #2c4a36;
+  --table-list-row-hover-border-color: #3a6048;
+  --table-list-row-background-color: #1c3325;
+
+  /* sidebar / dropdown / inputs / views / tooltip */
+  --sidebar-border-color: #2c4a36;
+  --dropdown-background-color: #14241a; --dropdown-border-color: #2c4a36; --dropdown-li-border-color: #1c3325;
+  --input-background-color: #14241a; --input-border-color: #2c4a36; --input-placeholder-color: #7d9384;
+  --input-focus-color: #f4faf4; --input-focus-border-color: rgba(143,214,160,.7); --input-focus-shadow-color: rgba(143,214,160,.35);
+  --input-addon-background-color: #16271c; --input-addon-color: #a9c4b0;
+  --views-background-color: #14241a; --views-border-color: #2c4a36; --views-active-color: #eaf3ea;
+  --tooltip-background-color: #14241a; --tooltip-border-color: #2c4a36; --tooltip-shadow-color: #000;
+
+  /* panel */
+  --panel-background-color: #14241a;
+  --panel-border-color: #2c4a36;
+
+  /* draggable */
+  --draggable-item-selected-background-color: #1c3325; --draggable-item-selected-border-color: #8fd6a0;
+  --draggable-item-hover-background-color: #24412f; --draggable-row-handle-color: #3a6048;
+  --draggable-placeholder-background-color: #16271c; --draggable-placeholder-border-color: #3a6048;
+
+  /* activity / comments / misc */
+  --activity-title-color: #f4faf4; --activity-title-border-color: #2c4a36;
+  --activity-event-background-color: #16271c; --activity-event-hover-color: #1c3325;
+  --avatar-color-letter: #0e1611;
+  --user-mention-color: #ade4b8;
+  --board-task-limit-color: #e3a59d;
+  --task-list-icons-color: #a9c4b0;
+  --form-help-color: #c9b56a;
+  --form-error-color: #e3a59d;
+  --comment-title-border-color: #2c4a36;
+  --comment-nth-background-color: #16271c;
+  --comment-highlighted-background-color: #2a2a10;
+  --comment-highlighted-hover-background-color: #24412f;
+  --comment-highlighted-border-color: #b89b4e;
+}
+
+/* ============================================================
+   SUPPLEMENTS — values Kanboard hardcodes (#000/#fff), not vars
+   ============================================================ */
+
+/* task cards: text is hardcoded black */
+.task-board a, .task-board-title, .task-board-title a,
+.task-table a, .dashboard-table-link,
+.menu-inline li .active a { color: #eaf3ea !important; }
+.task-board { border-color: #2c4a36 !important; }
+.task-date { color: #eaf3ea !important; }
+
+/* category chips: hardcoded black text + light fill */
+.task-board-category, .table-list-category {
+  color: #eaf3ea !important;
+  background: #1c3325 !important;
+  border-color: #2c4a36 !important;
+}
+.table-list-category a, [class*="category-"] { color: #eaf3ea !important; }
+
+/* list-view header: text uses --color-primary (pale green);
+   force pale-gold so it reads on the gold fill */
+.table-list-header a,
+.table-list-header .table-list-header-count,
+.table-list-header .column-title { color: #e7dca6 !important; }
+.table-list-header a:hover { color: #f5eecb !important; }
+
+/* task color labels → dark card + colored left accent */
+[class*="color-"] { background: #14241a !important; color: #eaf3ea !important; }
+.color-green { border-left: 4px solid #8fd6a0 !important; }
+.color-light_green { border-left: 4px solid #b9e6a0 !important; }
+.color-lime  { border-left: 4px solid #c7e08a !important; }
+.color-teal  { border-left: 4px solid #7fcfb0 !important; }
+.color-cyan  { border-left: 4px solid #7fc9cf !important; }
+.color-blue  { border-left: 4px solid #86b8e0 !important; }
+.color-light_blue { border-left: 4px solid #9fd0e8 !important; }
+.color-yellow { border-left: 4px solid #ddc97a !important; }
+.color-orange { border-left: 4px solid #e0a96a !important; }
+.color-deep_orange { border-left: 4px solid #e0883a !important; }
+.color-red    { border-left: 4px solid #e3a59d !important; }
+.color-pink   { border-left: 4px solid #e0a5bf !important; }
+.color-purple { border-left: 4px solid #bda5e6 !important; }
+.color-brown  { border-left: 4px solid #b89a7a !important; }
+.color-grey   { border-left: 4px solid #a9c4b0 !important; }
+.color-dark_grey { border-left: 4px solid #7d9384 !important; }
+
+/* any SVG icons (plugins) follow the pale font color */
+svg, svg path { fill: currentColor !important; }
+
+/* scrollbars */
+::-webkit-scrollbar { width: 12px; height: 12px; }
+::-webkit-scrollbar-track { background: #0e1611; }
+::-webkit-scrollbar-thumb { background: #2c4a36; border-radius: 6px; }
+::-webkit-scrollbar-thumb:hover { background: #a9c4b0; }
